@@ -86,6 +86,7 @@ public class MainApp {
         }
         KlasseDaMoody Kd1 = new KlasseDaMoody( 1000);
         KlasseDaMoody Kd2 = new KlasseDaMoody(1000);
+        KlasseDaMoody Kd3 = new KlasseDaMoody(1000);
         
         if (Kd1 == Kd2) {
             System.out.println("Die beiden Werte sind gleich ");
@@ -95,6 +96,12 @@ public class MainApp {
         }
         
         if (Kd1.equals(Kd2)) {
+            System.out.println("Die beiden Werte sind gleich");
+        }
+        if (Kd2.equals(Kd3)) {
+            System.out.println("Die beiden Werte sind gleich");
+        }
+        if (Kd1.equals(Kd3)) {
             System.out.println("Die beiden Werte sind gleich");
         }
         else {

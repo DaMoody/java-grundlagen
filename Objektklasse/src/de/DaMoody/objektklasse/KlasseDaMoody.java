@@ -26,5 +26,31 @@ public class KlasseDaMoody {
         
         return "Die Klasse " +this.getClass().getSimpleName() + " sagt: " + String.valueOf (this.meinWert) ;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+    
+        // Reflexivität
+        if ( this == obj )
+            return true;
+        
+        // der Vergleich mit null muss false liefern
+        if ( obj == null )
+            return false;
+        
+        // test auf vergleichbarkeit
+        if ( this.getClass() != obj.getClass() )
+            return false;
+        
+        // Test **aller** Attribute
+        if ( this.meinWert != ((KlasseDaMoody)obj).meinWert )
+            return false;
+        
+        // nach dem Test aller Attribute steht die Gleichheit fest
+        return true;
+    }
+         
+    
+    
     
 }
