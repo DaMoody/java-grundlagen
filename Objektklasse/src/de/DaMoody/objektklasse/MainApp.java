@@ -119,6 +119,9 @@ public class MainApp {
         }
     
         System.out.println(demoLang>>>32);
-        }  
-        System.out.println(hashCode(Kd1)) 
+        
+        System.out.println(Kd1.hashCode) ;
 }
+
+   
+    }
