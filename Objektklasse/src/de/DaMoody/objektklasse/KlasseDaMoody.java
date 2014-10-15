@@ -49,7 +49,17 @@ public class KlasseDaMoody {
         // nach dem Test aller Attribute steht die Gleichheit fest
         return true;
     }
-         
+    //-----------------------------------------------------------
+
+    @Override
+    public int hashCode() {
+        
+        return 59 * 17+ (int)(this.meinWert);
+    }
+    
+    
+    
+    
     
     
     

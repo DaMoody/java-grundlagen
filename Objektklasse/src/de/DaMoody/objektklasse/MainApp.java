@@ -107,5 +107,18 @@ public class MainApp {
         else {
            System.out.println("Die beiden Werte sind ungleich");
         }
-    }  
+        long demoLang = 1000l;
+    
+        for (int i = 0 ; i < 32; i++) {
+        
+        System.out.println(demoLang >> i);
+        }
+        for (int i = 0 ; i < 32; i++) {
+        
+        System.out.println(demoLang >>> i);
+        }
+    
+        System.out.println(demoLang>>>32);
+        }  
+        System.out.println(hashCode(Kd1)) 
 }
