@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package de.DaMoody.java;
-
 /**
  *
  * @author Danny Borrmann <Danny_Borrmann@web.de>
@@ -16,21 +15,22 @@ public class MainApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        DemoKlasseA da = new DemoKlasseA();
-        
-        da.etwasKritisches();
-        
-        DemoKlasseB dkb = new DemoKlasseB();
-        
-        
         try {
-            dkb.ichWerfeWas();
-        }
-        catch (Exception e){
             
-            System.err.println(e.getMessage());
+            if (!true)
+                throw new NoDataFoundException("keine Daten gefunden");
+            else
+                throw new FileNotFoundException("Datei xyz nicht gefunden");
         }
-    
+        catch( NoDataFoundException e) {
+                
+        }
+        catch( FileNotFoundException e) {
+                
+        }
+        catch( Exception e){
+                
+        }
     }
     
 }
