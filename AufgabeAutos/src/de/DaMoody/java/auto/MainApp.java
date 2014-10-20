@@ -6,7 +6,9 @@
 package de.DaMoody.java.auto;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.TreeSet;
 
 /**
  *
@@ -15,19 +17,58 @@ import java.util.List;
 public class MainApp {
 
     /**
-     * @param args the command line arguments
+     * 
+     * @param args 
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    
-    
+
         List<Car> autoListe = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
-        autoListe.add( new Car((i % 2 == 0), i*100));
+            autoListe.add(new Car((i % 2 == 0), i * 100));
         }
-        for(Car a: autoListe) {
-            System.out.println( a );
+        for (Car a : autoListe) {
+            System.out.println(a);
         }
+    
+    
+        
+        HashSet<Car> hashCar = new HashSet<>();
+        
+        hashCar.add( new Car( true, 0));
+        hashCar.add( new Car(true, 0));
+        hashCar.add( new Car(true, 1000));
+        hashCar.add( new Car(false, 1000));
+        
+        System.out.println("Das HashSet enthält "+ hashCar.size() +" Elemente");
+        
+    
+        // wir testen ein Strung-Hashset<>();
+        
+        HashSet<String> hashString = new HashSet<>();
+        
+        hashString.add("Hallo ");
+        hashString.add("wunderschöne ");
+        hashString.add("Java-Welt ");
+        
+        for( String s: hashString ) {
+            System.out.println( s + "HashCode: " + s.hashCode());
+        }
+        // wir setzen auf sortierte Kollektionen, TreeSet
+        
+        TreeSet<Integer> treeInt = new TreeSet<>();
+        
+        treeInt.add(1000);
+        treeInt.add(500);
+        treeInt.add(250);
+        treeInt.add(750);
+        treeInt.add(875);
+        treeInt.add(225);
+        
+        for (Integer i : treeInt) {
+            
+            System.out.println(i);
+        }
+        
     }
 }
-    

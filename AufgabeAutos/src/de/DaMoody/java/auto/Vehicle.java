@@ -5,8 +5,6 @@
  */
 package de.DaMoody.java.auto;
 
-
-
 /**
  *
  * @author Danny Borrmann <Danny_Borrmann@web.de>
@@ -14,7 +12,9 @@ package de.DaMoody.java.auto;
 public interface Vehicle {
 
     public void startEngine();
+
     public void stopEngine();
+
     public void move(int distance);
-  
+
 }
