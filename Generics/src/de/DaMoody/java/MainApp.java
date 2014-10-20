@@ -51,8 +51,19 @@ public class MainApp {
         System.out.println( eineAndereBox.<Integer>vergleiche(mBoxA, mBoxB));
         //System.out.println( eineAndereBox.<Integer>vergleiche(mBoxB, mBoxC));
     
-    
-    
+        //===================================================================
+        
+        NochEineAndereBox<Integer> neabi = new NochEineAndereBox<>();
+        NochEineAndereBox<Byte> neabb = new NochEineAndereBox<>();
+        
+        //NochEineAndereBox<String> neabs = new NochEineAndereBox<>();
+        // String ist nich zulässig
+        
+        neabi.set(new Integer(10));
+        neabb.set(new Byte("10"));
+        
+        neabi.untersuche( new Integer (2000));
+        neabb.untersuche( new Byte("20"));
     
     }
     
