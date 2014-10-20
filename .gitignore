@@ -14,3 +14,4 @@ hs_err_pid*
 # netbeansspezifische Dateien ausblenden
 nbproject/
 build/
+/CollectionMaps/dist/

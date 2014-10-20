@@ -70,5 +70,35 @@ public class MainApp {
             System.out.println(i);
         }
         
+        TreeSet<String> treeString = new TreeSet<>();
+        
+        treeString.add("Anton");
+        treeString.add("Zylinder");
+        treeString.add("Paula");
+        treeString.add("Berta");
+        treeString.add("Cäsar");
+        treeString.add("Ludwig");
+        treeString.add("Emil");
+        
+        for (String s : treeString) {
+            
+            System.out.println(s);
+           
+        }
+        //wir testen das TreeSet mit den Cars
+        TreeSet<Car> treeCar = new TreeSet<>();
+        
+        treeCar.add( new Car(true, 2000));
+        treeCar.add( new Car(true, 5000));
+        treeCar.add( new Car(true, 1000));
+        
+        for ( Car c : treeCar) {
+            
+            System.out.println(c);
+        }
+    
+    
+    
+    
     }
 }
