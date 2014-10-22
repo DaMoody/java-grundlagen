@@ -16,10 +16,26 @@ public class MainApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+        // bidirektionale Assoziation mit fester 1:1 Multiplizität
+        KlasseA a = new KlasseA();
+        KlasseB b = new KlasseB();
+        KlasseB b1 = new KlasseB();
+
+        a.setLink(b);
+        a.setLink(b1);
+        a.setLink(b1);
+        a.removeLink(b1);
+        
+        KlasseC c = new KlasseC();
+        
+        c.setLink(new KlasseD());
+        c.setLink(new KlasseD());
+        c.setLink(new KlasseD());
+        c.setLink(new KlasseD());
+    for (KlasseD objD : c.getAllLinks()){
+        System.out.println(objD);
+    }
     
-    KlasseA a = new KlasseA();
-    KlasseB b = new KlasseB();
-    
-    a.setLink(b);
     }
 }

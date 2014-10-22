@@ -5,8 +5,6 @@
  */
 package de.DaMoody.java.WohnungStell;
 
-
-
 /**
  *
  * @author Danny Borrmann <Danny_Borrmann@web.de>
@@ -22,17 +20,31 @@ public class KlasseA {
      * @param objB
      */
     public void setLink(KlasseB objB) {
-        
+
+        if (this.b != null && this.b != objB) {
+// wird das alte ObjektB aufgefordert, den Link auf das ObjektA (this) zu löschen
+            this.b.removeLink(this);
+        }
+
         this.b = objB;
-        
-        if (objB.getLink() == null) {
+
+        if (objB.getLink() != this) {
             objB.setLink(this);
         }
-    } 
-    public void removelink() {
-        this.b = null;
-     
+
     }
+
+    public void removeLink(KlasseB objB) {
+        if (this.b != objB) {
+            return;
+        }
+        KlasseB tmp = this.b;
+        this.b = null;
+        if (this == tmp.getLink()) {
+            tmp.removeLink(this);
+        }
+    }
+
     public KlasseB getLink() {
         return this.b;
     }

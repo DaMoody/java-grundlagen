@@ -9,19 +9,25 @@ package de.DaMoody.java.WohnungStell;
  *
  * @author Danny Borrmann <Danny_Borrmann@web.de>
  */
-public class Wohnung extends Stellplatz {
+public class KlasseD {
+  
+    private static int nummer = 0;
+    private int id;
 
-    private Stellplatz stellPlatz;
-
-    public void setLink(Stellplatz s) {
-        this.stellPlatz = s;
+    KlasseD(){
+    this.id = KlasseD.nummer;
+    KlasseD.nummer ++;
     }
-
-    public void removelink() {
-        this.stellPlatz = null;
+    
+    @Override
+    public String toString() {
+    return this.getClass().getSimpleName() + ":" + this.id;
     }
-
-    public Stellplatz getLink() {
-        return this.stellPlatz;
-    }
+    
+    
+    
+       
+        
+    
+ 
 }

@@ -5,39 +5,48 @@
  */
 package de.DaMoody.java.WohnungStell;
 
-
-
 /**
  *
  * @author Danny Borrmann <Danny_Borrmann@web.de>
  */
 public class KlasseB {
-   
+
     private KlasseA a = null;
 
-/**
-     * stellt die Beziehung zum Objekt der KlasseB her und 
-     * fordert das Objekt der KlasseB auf, eine Beziehung
-     * zum sich selbst(this) herzustellen.
-     * 
-     * @param objA 
+    /**
+     * stellt die Beziehung zum Objekt der KlasseB her und fordert das Objekt
+     * der KlasseB auf, eine Beziehung zum sich selbst(this) herzustellen.
+     *
+     * @param objA
      */
-    
     public void setLink(KlasseA objA) {
-       
+
+        if (this.a != null && this.a != objA) {
+// wird das alte ObjektA aufgefordert, den Link auf das ObjektB (this) zu löschen
+            this.a.removeLink(this);
+        }
+
         this.a = objA;
-        
-        if (objA.getLink() == null) {
+
+        if (objA.getLink() != this) {
             objA.setLink(this);
         }
-        
+
     }
-    public void removelink() {
+
+    public void removeLink(KlasseA objA) {
+        if (this.a != objA) {
+            return;
+        }
+        KlasseA tmp = this.a;
         this.a = null;
-     
+        if (this == tmp.getLink()) {
+            tmp.removeLink(this);
+        }
     }
+
     public KlasseA getLink() {
         return this.a;
     }
-    
+
 }
