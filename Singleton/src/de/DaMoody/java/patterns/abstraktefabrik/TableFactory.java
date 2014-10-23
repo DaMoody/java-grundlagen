@@ -20,5 +20,5 @@ public abstract class TableFactory {
     public abstract Row createRow();
 
     // eine Methode zum Erzeugen von Zellen
-    public abstract Cell createCell();
+    public abstract Cell createCell(String c);
 }
