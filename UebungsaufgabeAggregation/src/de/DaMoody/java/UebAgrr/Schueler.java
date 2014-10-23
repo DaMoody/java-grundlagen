@@ -10,24 +10,26 @@ package de.DaMoody.java.UebAgrr;
  * @author Danny Borrmann <Danny_Borrmann@web.de>
  */
 public class Schueler {
-    private int id ;
+    public int id;
     public static int nummer;
-    private final String name;
+    private static String name;
 
-    public  Schueler (int id, String name) {
-        this.id = id;
-        this.name = name;
+    public Schueler (int id , String name) {
+        this.id = Schueler.nummer;
+        this.name = Schueler.name;
         Schueler.nummer ++;
     }
 
+    
+  
    public int getId() {
     
-        return this.nummer;
+        return this.id;
     }
 
     @Override
     public String toString() {
-        return (this.getClass().getSimpleName() + " ID: " + this.nummer + " Name: " + this.name); 
+        return (this.getClass().getSimpleName() + " ID: " + Schueler.nummer + " Name: " + Schueler.name); 
     }
     
 }

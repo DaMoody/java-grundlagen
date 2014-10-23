@@ -16,8 +16,11 @@ public class mainApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    Schueler Klaus = new Schueler(1, Klaus);
-    
+        Schueler Mueller = new Schueler(1, "Klaus");
+        Schueler Meier = new Schueler(1, "Hans");
+        Schueler Betram = new Schueler(1, "Getnow");
+
+        Kurs.auflisten();
+
     }
-    
 }
